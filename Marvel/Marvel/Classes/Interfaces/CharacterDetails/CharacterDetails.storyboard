@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ae4-cR-Ztu">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Character Details View Controller-->
+        <scene sceneID="JPw-6l-Lhi">
+            <objects>
+                <viewController id="Ae4-cR-Ztu" customClass="CharacterDetailsViewController" customModule="Marvel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MSZ-3t-ErX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5s5-OG-Am7">
+                                <rect key="frame" x="67.5" y="63" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="995-hp-Mld"/>
+                                    <constraint firstAttribute="height" constant="240" id="HTy-fg-uLi"/>
+                                    <constraint firstAttribute="width" secondItem="5s5-OG-Am7" secondAttribute="height" multiplier="1:1" id="lDB-eq-dp2"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCm-tm-VhI">
+                                <rect key="frame" x="152" y="335" width="71" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ttp-gm-blL">
+                                <rect key="frame" x="166.5" y="403" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dCm-tm-VhI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="l1Y-7d-WKi" secondAttribute="leading" constant="32" id="0Te-x9-919"/>
+                            <constraint firstItem="l1Y-7d-WKi" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ttp-gm-blL" secondAttribute="trailing" constant="32" id="4dA-J2-STJ"/>
+                            <constraint firstItem="l1Y-7d-WKi" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Ttp-gm-blL" secondAttribute="bottom" constant="16" id="JgH-u0-VhR"/>
+                            <constraint firstItem="l1Y-7d-WKi" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dCm-tm-VhI" secondAttribute="trailing" constant="32" id="KwO-qk-NLU"/>
+                            <constraint firstItem="Ttp-gm-blL" firstAttribute="top" secondItem="dCm-tm-VhI" secondAttribute="bottom" constant="32" id="Ltg-La-XVI"/>
+                            <constraint firstItem="dCm-tm-VhI" firstAttribute="centerX" secondItem="MSZ-3t-ErX" secondAttribute="centerX" id="PrZ-gu-etQ"/>
+                            <constraint firstItem="5s5-OG-Am7" firstAttribute="centerX" secondItem="MSZ-3t-ErX" secondAttribute="centerX" id="S5B-NO-dtf"/>
+                            <constraint firstItem="Ttp-gm-blL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="l1Y-7d-WKi" secondAttribute="leading" constant="32" id="V38-hX-psk"/>
+                            <constraint firstItem="Ttp-gm-blL" firstAttribute="centerX" secondItem="MSZ-3t-ErX" secondAttribute="centerX" id="f01-f5-suU"/>
+                            <constraint firstItem="5s5-OG-Am7" firstAttribute="top" secondItem="l1Y-7d-WKi" secondAttribute="top" constant="43" id="wNM-gC-nnv"/>
+                            <constraint firstItem="dCm-tm-VhI" firstAttribute="top" secondItem="5s5-OG-Am7" secondAttribute="bottom" constant="32" id="zeu-Ch-TBe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="l1Y-7d-WKi"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="A6J-Xb-lcu">
+                        <barButtonItem key="rightBarButtonItem" title="Add Fav" id="KBf-gO-KsW">
+                            <connections>
+                                <action selector="favouriteButtonAction:" destination="Ae4-cR-Ztu" id="XvZ-zt-utM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="characterImageView" destination="5s5-OG-Am7" id="LmK-gu-t0q"/>
+                        <outlet property="descriptionLabel" destination="Ttp-gm-blL" id="1Ag-2p-YXN"/>
+                        <outlet property="favouriteButton" destination="KBf-gO-KsW" id="kax-1h-g9p"/>
+                        <outlet property="nameLabel" destination="dCm-tm-VhI" id="YD4-4y-kLz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dIT-pI-s7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
