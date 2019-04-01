@@ -12,8 +12,8 @@ character as a favorite. (in character detail or in
 another view)
 
 ## Comments
-* I have unsed MVVM whit protocols.
+* I have unsed MVVM with protocols.
 * I have used Alamorire and AlamofireImages pods.
-* I have spent 8 hours to do this test.
+* I have spent 8 hours to make this test.
 * There are unit tests samples.
 * Please, remember that this is a test.
